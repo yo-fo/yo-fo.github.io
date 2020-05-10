@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<section>
+			
+			<h1>Alien Abduction Order Form</h1>
+			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+		
+		<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" 
+				method="POST">
+			<fieldset>
+
+				<input type="hidden"
+				  		name="send_to"
+				  		value="yo.foult@gmail.com">
+		
+				<legend>Your contact information</legend>
+				<p><label for="name">Your name </label><!--name here refers to the id of the input-->
+				<input type="text" id="name" name="name"></input>	<!--name attribute is for processing script on server-->
+				</p>
+				<p>
+				<label for="phone">Phone number</label>
+				<input type="number" id="phone" name="phone" placeholder="don'tforget your area code">
+				<!--placeholder attribute to put text into inputbox-->
+				</p>
+				<p>
+				<label for="Email">Email</label>
+				<input type="email" id="email" name="email">
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>About your abduction </legend>
+				<P>
+				<label for="date">Requested  date
+				<input type="date" id="date" name="date">
+				</label>
+				</P>
+
+				<p>
+				<label for="qty">How many people would you like abducted?
+				<input type="number" id="qty" name="qty" min="1" max="10">
+				</label>
+				</p>
+
+				<p class="radio">What type of UFO do you prefer?
+					<label class="radio">
+					<input type="radio"
+							name="ufotype"
+							value="classic"
+							checked>
+							Classic oval UFOs
+					</label>
+					<label class="radio">
+						<input type="radio"
+								name="ufotype"
+								value="starwars">
+								Star Wars-style Imperial cruiser
+					</label>
+					<label class="radio">
+						<input type="radio"
+								name="ufotype"
+								value="battlestar">
+								Battlestar Galactica-style Viper
+					</label>
+					<label class="radio">
+						<input type="radio"
+								name="ufotype"
+								value="cube">
+								Borg-style cube
+					</label>
+				</p>
+					
+				<p>
+				<label for="abtype">What type of abduction experience do you want?
+					<select id="abtype" name="abtype"> <!--for attribute of label links to id attribute of selection-->
+						<!--name & value are for backend processing-->
+				
+						<option selected>Select an option</option>
+						<option value="tour">Tour of the solar system</option>
+						<option value="dinner">Alien dinner and discussion</option>
+						<option value="dance">Alien dance lesson</option>
+						<option value="whale">Whale watching</option>
+					</select>
+				</label>
+				</p>
+				<p>
+				<label for="comments">Special requests:</label>
+				<textarea id="comments"					
+						name="comments" 
+						placeholder="tell me about you..."></textarea>
+				</p>
+				<p>
+				<label>
+					<input type="checkbox"
+						value="subscribe"
+						name="subscribe" 
+						checked>
+						Add me to your email list
+				</label>
+				</p>
+			</fieldset>
+
+			<button type="submit">Order your abduction experience</button>
+
+		</form>				
+		</section>
+		<aside>
+			<!-- mon adresse à google map
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6786.70972286599!2d35.20563564648957!3d31.73351353988375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502d81b103b2031%3A0xfcf727d635ad917b!2z15DXpNeo16HXnteV158gNSwg15nXqNeV16nXnNeZ150!5e0!3m2!1siw!2sil!4v1589098440025!5m2!1siw!2sil" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			-->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.1624293282891!2d-93.26984000593923!3d44.97771144217596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a75fc44b3%3A0xab6d15df00205abb!2zNjAgU291dGggNnRoIFN0LCBNaW5uZWFwb2xpcywgTU4gNTU0MDIsINeQ16jXpteV16og15TXkdeo15nXqg!5e0!3m2!1siw!2sil!4v1589096841674!5m2!1siw!2sil" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>			<h3>Our Location</h3>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+		</aside>
+	</div>
+	<script src="js/forms.js"></script>
+</body>
+</html>
+
+
+
+
+
